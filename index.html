@@ -40,9 +40,26 @@
 
 			header img {
 				width: 300px;
-				height: 400px;
+				height: auto;
 				object-fit: cover;
 			}
+			/* MOBILE layout */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;   /* stack elements */
+    text-align: center;
+  }
+
+  header img {
+    order: 1;                 /* image first */
+    width: 70%;
+    max-width: 300px;
+  }
+
+  header .text {
+    order: 2;                 /* title + description below image */
+  }
+}
 			.text {
 				display: flex;
 				flex-direction: column;
